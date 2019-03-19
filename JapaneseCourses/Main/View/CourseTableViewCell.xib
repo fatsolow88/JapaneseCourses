@@ -11,29 +11,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="44" id="CML-Wg-MCK" customClass="CourseTableViewCell" customModule="JapaneseCourses" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="CML-Wg-MCK" customClass="CourseTableViewCell" customModule="JapaneseCourses" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CML-Wg-MCK" id="dho-5M-Hk5">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lp0-7n-Gzv">
-                        <rect key="frame" x="16" y="11.5" width="42" height="21"/>
+                        <rect key="frame" x="16" y="14.5" width="42" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="BWO-Qb-cDT"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3g-oQ-hBL">
-                        <rect key="frame" x="317" y="11.5" width="42" height="21"/>
+                        <rect key="frame" x="317" y="14.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="lp0-7n-Gzv" firstAttribute="top" secondItem="dho-5M-Hk5" secondAttribute="top" constant="14.5" id="6TI-Qq-kMy"/>
                     <constraint firstItem="lp0-7n-Gzv" firstAttribute="leading" secondItem="dho-5M-Hk5" secondAttribute="leading" constant="16" id="HKQ-VB-ICG"/>
                     <constraint firstItem="lp0-7n-Gzv" firstAttribute="centerY" secondItem="dho-5M-Hk5" secondAttribute="centerY" id="Tpe-fc-pbj"/>
+                    <constraint firstAttribute="bottom" secondItem="lp0-7n-Gzv" secondAttribute="bottom" constant="14.5" id="Xap-93-vtL"/>
                     <constraint firstItem="T3g-oQ-hBL" firstAttribute="centerY" secondItem="dho-5M-Hk5" secondAttribute="centerY" id="apW-Ae-4fZ"/>
                     <constraint firstAttribute="trailing" secondItem="T3g-oQ-hBL" secondAttribute="trailing" constant="16" id="gcd-Hn-xoX"/>
                 </constraints>

@@ -1,0 +1,6 @@
+framework module CrosswordsGenerator {
+  umbrella header "CrosswordsGenerator-umbrella.h"
+
+  export *
+  module * { export * }
+}

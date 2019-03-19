@@ -9,5 +9,6 @@ target 'JapaneseCourses' do
 	pod 'RxSwift',    '~> 4.0'
 	pod 'RxCocoa',    '~> 4.0'
 	pod 'SnapKit',    '~> 4.0.0'
+	pod 'CrosswordsGenerator'
     # Pods for MGSaaS    
 end

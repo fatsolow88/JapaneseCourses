@@ -25,6 +25,8 @@ struct CourseViewModel {
         //Handle the display style / context
         if(course.numberOfLessons > 100){
             numberOfLessonsString = "More than 100 courses"
+        }else if(course.numberOfLessons == 0){
+            numberOfLessonsString = ""
         }else{
             numberOfLessonsString = "\(course.numberOfLessons)" + " courses"
         }
