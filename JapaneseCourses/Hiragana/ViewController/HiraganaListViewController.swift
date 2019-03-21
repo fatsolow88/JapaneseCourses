@@ -11,10 +11,16 @@ import UIKit
 import RxCocoa
 import RxSwift
 
+protocol HiraganaListViewControllerDelegate: class {
+    func hiraganaListViewControllerDidSelectHiragana(selectedModel: HiraganaModel)
+}
+
 class HiraganaListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    weak var delegate: HiraganaListViewControllerDelegate?
     
     private let disposeBag  = DisposeBag()
 

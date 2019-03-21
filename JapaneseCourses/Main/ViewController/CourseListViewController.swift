@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CourseListViewController.swift
 //  JapaneseCourses
 //
 //  Created by Low Wai Hong on 13/03/2019.
@@ -10,10 +10,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController, UITableViewDelegate {
+
+protocol CourseListViewControllerDelegate: class {
+    func courseListViewControllerDidSelectCourse(selectedCourse: CourseViewModel)
+}
+
+class CourseListViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
+    weak var delegate: CourseListViewControllerDelegate?
+    
     let viewModel: CourseViewControllerViewModel = CourseViewControllerViewModel()
     private let disposeBag  = DisposeBag()
 
@@ -24,9 +31,6 @@ class ViewController: UIViewController, UITableViewDelegate {
 
         bindViewModel()
         setupCellTapHandling()
-        // Do any additional setup after loading the view, typically from a nib.
-//        tableView.rx.setDelegate(self).disposed(by: disposeBag)
-
         
         viewModel.getCourses()
     }
@@ -74,9 +78,7 @@ class ViewController: UIViewController, UITableViewDelegate {
             .subscribe(
                 onNext: { [weak self] courseCellType in
                     if case let .normal(viewModel) = courseCellType {
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let controller = storyboard.instantiateViewController(withIdentifier: "HiraganaListViewControllerSID") as? HiraganaListViewController
-                        self?.navigationController?.pushViewController(controller!, animated: true)
+                        self?.delegate?.courseListViewControllerDidSelectCourse(selectedCourse: viewModel)
                     }
                     if let selectedRowIndexPath = self?.tableView.indexPathForSelectedRow {
                         self?.tableView?.deselectRow(at: selectedRowIndexPath, animated: true)

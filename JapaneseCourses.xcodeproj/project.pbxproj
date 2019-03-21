@@ -24,13 +24,17 @@
 		F106FE5C223F9D8000AF569A /* CrosswordTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F106FE5B223F9D8000AF569A /* CrosswordTextCollectionViewCell.xib */; };
 		F106FE5E2240844100AF569A /* CourseViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106FE5D2240844100AF569A /* CourseViewControllerViewModel.swift */; };
 		F1C088142238A92200CA9555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C088132238A92200CA9555 /* AppDelegate.swift */; };
-		F1C088162238A92200CA9555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C088152238A92200CA9555 /* ViewController.swift */; };
 		F1C088192238A92200CA9555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C088172238A92200CA9555 /* Main.storyboard */; };
 		F1C0881B2238A92300CA9555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C0881A2238A92300CA9555 /* Assets.xcassets */; };
 		F1C0881E2238A92300CA9555 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C0881C2238A92300CA9555 /* LaunchScreen.storyboard */; };
 		F1C088292238A92300CA9555 /* JapaneseCoursesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C088282238A92300CA9555 /* JapaneseCoursesTests.swift */; };
 		F1C088342238A92300CA9555 /* JapaneseCoursesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C088332238A92300CA9555 /* JapaneseCoursesUITests.swift */; };
 		F1C088502239092A00CA9555 /* CourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C0884F2239092A00CA9555 /* CourseModel.swift */; };
+		F1CC586622422C090026616D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC586522422C080026616D /* Coordinator.swift */; };
+		F1CC586822422F710026616D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC586722422F710026616D /* ApplicationCoordinator.swift */; };
+		F1CC586A224234BE0026616D /* CourseListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC5869224234BE0026616D /* CourseListCoordinator.swift */; };
+		F1CC586C22423AF60026616D /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC586B22423AF60026616D /* CourseListViewController.swift */; };
+		F1CC586E22423DBD0026616D /* HiraganaListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC586D22423DBD0026616D /* HiraganaListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +75,6 @@
 		F106FE5D2240844100AF569A /* CourseViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewControllerViewModel.swift; sourceTree = "<group>"; };
 		F1C088102238A92200CA9555 /* JapaneseCourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseCourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C088132238A92200CA9555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1C088152238A92200CA9555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1C088182238A92200CA9555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1C0881A2238A92300CA9555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1C0881D2238A92300CA9555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,6 +86,11 @@
 		F1C088332238A92300CA9555 /* JapaneseCoursesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseCoursesUITests.swift; sourceTree = "<group>"; };
 		F1C088352238A92300CA9555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1C0884F2239092A00CA9555 /* CourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseModel.swift; sourceTree = "<group>"; };
+		F1CC586522422C080026616D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F1CC586722422F710026616D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		F1CC5869224234BE0026616D /* CourseListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListCoordinator.swift; sourceTree = "<group>"; };
+		F1CC586B22423AF60026616D /* CourseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
+		F1CC586D22423DBD0026616D /* HiraganaListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +157,7 @@
 		F1000C9E223B949800778014 /* Hiragana */ = {
 			isa = PBXGroup;
 			children = (
+				F1CC586D22423DBD0026616D /* HiraganaListCoordinator.swift */,
 				F1000C9F223B94AB00778014 /* ViewController */,
 				F1000CA0223B94B200778014 /* View Model */,
 				F1000CA2223B95D300778014 /* Model */,
@@ -183,6 +192,7 @@
 		F1000CA3223B95E100778014 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F1CC5869224234BE0026616D /* CourseListCoordinator.swift */,
 				F1000CA4223B95F100778014 /* ViewController */,
 				F1000C94223A4C4200778014 /* View Model */,
 				F1C0884E223908F600CA9555 /* Model */,
@@ -194,7 +204,7 @@
 		F1000CA4223B95F100778014 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F1C088152238A92200CA9555 /* ViewController.swift */,
+				F1CC586B22423AF60026616D /* CourseListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -295,6 +305,8 @@
 			isa = PBXGroup;
 			children = (
 				F1C088132238A92200CA9555 /* AppDelegate.swift */,
+				F1CC586722422F710026616D /* ApplicationCoordinator.swift */,
+				F1CC586522422C080026616D /* Coordinator.swift */,
 				F1000CA3223B95E100778014 /* Main */,
 				F1000C9E223B949800778014 /* Hiragana */,
 				F106FE4E223F9A1200AF569A /* CrosswordPuzzle */,
@@ -529,16 +541,20 @@
 			files = (
 				F1000C91223A3A0600778014 /* CourseTableViewCell.swift in Sources */,
 				F1000CAA223B9C7C00778014 /* HiraganaModel.swift in Sources */,
+				F1CC586622422C090026616D /* Coordinator.swift in Sources */,
+				F1CC586E22423DBD0026616D /* HiraganaListCoordinator.swift in Sources */,
 				F1000CAD223B9DAD00778014 /* HiraganaCollectionViewCell.swift in Sources */,
-				F1C088162238A92200CA9555 /* ViewController.swift in Sources */,
 				F1000CA8223B966A00778014 /* HiraganaListViewController.swift in Sources */,
 				F106FE58223F9D6900AF569A /* CrosswordTextCollectionViewCell.swift in Sources */,
 				F106FE5E2240844100AF569A /* CourseViewControllerViewModel.swift in Sources */,
 				F1000C96223A4CD200778014 /* CourseViewModel.swift in Sources */,
+				F1CC586A224234BE0026616D /* CourseListCoordinator.swift in Sources */,
 				F106FE54223F9A8300AF569A /* CrosswordPuzzleViewController.swift in Sources */,
 				F106FE56223F9D1900AF569A /* CrosswordBlackCollectionViewCell.swift in Sources */,
+				F1CC586C22423AF60026616D /* CourseListViewController.swift in Sources */,
 				F1C088142238A92200CA9555 /* AppDelegate.swift in Sources */,
 				F1C088502239092A00CA9555 /* CourseModel.swift in Sources */,
+				F1CC586822422F710026616D /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
