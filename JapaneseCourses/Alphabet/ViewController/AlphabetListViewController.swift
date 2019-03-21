@@ -1,5 +1,5 @@
 //
-//  HiraganaListViewController.swift
+//  AlphabetListViewController.swift
 //  JapaneseCourses
 //
 //  Created by Low Wai Hong on 15/03/2019.
@@ -11,21 +11,21 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-protocol HiraganaListViewControllerDelegate: class {
-    func hiraganaListViewControllerDidSelectHiragana(selectedModel: HiraganaModel)
+protocol AlphabetListViewControllerDelegate: class {
+    func alphabetListViewControllerDidSelectAlphabet(selectedModel: AlphabetModel)
 }
 
-class HiraganaListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class AlphabetListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    weak var delegate: HiraganaListViewControllerDelegate?
+    weak var delegate: AlphabetListViewControllerDelegate?
     
     private let disposeBag  = DisposeBag()
 
-    var hiraganaModels  = [HiraganaModel]()
-    let dataSource  = BehaviorRelay(value: [HiraganaModel]())
+    var hiraganaModels  = [AlphabetModel]()
+    let dataSource  = BehaviorRelay(value: [AlphabetModel]())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +34,17 @@ class HiraganaListViewController: UIViewController, UICollectionViewDelegate, UI
             let hiraganaArray = try! JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: path)), options: JSONSerialization.ReadingOptions()) as? [[String : String]]
             
             for hiraganaDict in hiraganaArray! {
-                hiraganaModels.append(HiraganaModel(char_id: hiraganaDict["char_id"] ?? "", character: hiraganaDict["character"] ?? "", romanization: hiraganaDict["romanization"] ?? ""))
+                hiraganaModels.append(AlphabetModel(char_id: hiraganaDict["char_id"] ?? "", character: hiraganaDict["character"] ?? "", romanization: hiraganaDict["romanization"] ?? ""))
             }
             
         }
         
         dataSource.accept(hiraganaModels)
 
-        collectionView?.register(UINib(nibName: "HiraganaCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: HiraganaCollectionViewCell.Identifier)
+        collectionView?.register(UINib(nibName: "AlphabetCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AlphabetCollectionViewCell.Identifier)
 
-        dataSource.asObservable().bind(to:collectionView.rx.items(cellIdentifier: HiraganaCollectionViewCell.Identifier, cellType: HiraganaCollectionViewCell.self)) { row, data, cell in
-                cell.hiraganaModel = data
+        dataSource.asObservable().bind(to:collectionView.rx.items(cellIdentifier: AlphabetCollectionViewCell.Identifier, cellType: AlphabetCollectionViewCell.self)) { row, data, cell in
+                cell.alphabetModel = data
             }.disposed(by: disposeBag)
         
         // add this line you can provide the cell size from delegate method

@@ -1,5 +1,5 @@
 //
-//  HiraganaListCoordinator.swift
+//  AlphabetListCoordinator.swift
 //  JapaneseCourses
 //
 //  Created by Low Wai Hong on 20/03/2019.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class HiraganaListCoordinator: Coordinator {
+class AlphabetListCoordinator: Coordinator {
     private let presenter: UINavigationController
-    private var hiraganaListViewController: HiraganaListViewController?
+    private var alphabetListViewController: AlphabetListViewController?
     private var courseListViewController: CourseListViewController?
 
     init(presenter: UINavigationController) {
@@ -21,15 +21,15 @@ class HiraganaListCoordinator: Coordinator {
     
     func start() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "HiraganaListViewControllerSID") as? HiraganaListViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "AlphabetListViewControllerSID") as? AlphabetListViewController
         controller?.delegate = self
         presenter.pushViewController(controller ?? UIViewController(), animated: true)
-        self.hiraganaListViewController = controller
+        self.alphabetListViewController = controller
     }
 }
-
-extension HiraganaListCoordinator: HiraganaListViewControllerDelegate {
-    func hiraganaListViewControllerDidSelectHiragana(selectedModel: HiraganaModel) {
+ 
+extension AlphabetListCoordinator: AlphabetListViewControllerDelegate {
+    func alphabetListViewControllerDidSelectAlphabet(selectedModel: AlphabetModel) {
         
     }
 }

@@ -13,10 +13,10 @@
 		F1000C96223A4CD200778014 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000C95223A4CD200778014 /* CourseViewModel.swift */; };
 		F1000C99223B8C5800778014 /* hiragana.json in Resources */ = {isa = PBXBuildFile; fileRef = F1000C98223B8C5700778014 /* hiragana.json */; };
 		F1000C9B223B8C6100778014 /* katakana.json in Resources */ = {isa = PBXBuildFile; fileRef = F1000C9A223B8C6100778014 /* katakana.json */; };
-		F1000CA8223B966A00778014 /* HiraganaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000CA7223B966A00778014 /* HiraganaListViewController.swift */; };
-		F1000CAA223B9C7C00778014 /* HiraganaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000CA9223B9C7C00778014 /* HiraganaModel.swift */; };
-		F1000CAD223B9DAD00778014 /* HiraganaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000CAC223B9DAD00778014 /* HiraganaCollectionViewCell.swift */; };
-		F1000CAF223BA31700778014 /* HiraganaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1000CAE223BA31700778014 /* HiraganaCollectionViewCell.xib */; };
+		F1000CA8223B966A00778014 /* AlphabetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000CA7223B966A00778014 /* AlphabetListViewController.swift */; };
+		F1000CAA223B9C7C00778014 /* AlphabetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000CA9223B9C7C00778014 /* AlphabetModel.swift */; };
+		F1000CAD223B9DAD00778014 /* AlphabetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000CAC223B9DAD00778014 /* AlphabetCollectionViewCell.swift */; };
+		F1000CAF223BA31700778014 /* AlphabetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1000CAE223BA31700778014 /* AlphabetCollectionViewCell.xib */; };
 		F106FE54223F9A8300AF569A /* CrosswordPuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106FE53223F9A8300AF569A /* CrosswordPuzzleViewController.swift */; };
 		F106FE56223F9D1900AF569A /* CrosswordBlackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106FE55223F9D1900AF569A /* CrosswordBlackCollectionViewCell.swift */; };
 		F106FE58223F9D6900AF569A /* CrosswordTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106FE57223F9D6900AF569A /* CrosswordTextCollectionViewCell.swift */; };
@@ -34,7 +34,7 @@
 		F1CC586822422F710026616D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC586722422F710026616D /* ApplicationCoordinator.swift */; };
 		F1CC586A224234BE0026616D /* CourseListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC5869224234BE0026616D /* CourseListCoordinator.swift */; };
 		F1CC586C22423AF60026616D /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC586B22423AF60026616D /* CourseListViewController.swift */; };
-		F1CC586E22423DBD0026616D /* HiraganaListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC586D22423DBD0026616D /* HiraganaListCoordinator.swift */; };
+		F1CC586E22423DBD0026616D /* AlphabetListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC586D22423DBD0026616D /* AlphabetListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +63,10 @@
 		F1000C95223A4CD200778014 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		F1000C98223B8C5700778014 /* hiragana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiragana.json; sourceTree = "<group>"; };
 		F1000C9A223B8C6100778014 /* katakana.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = katakana.json; sourceTree = "<group>"; };
-		F1000CA7223B966A00778014 /* HiraganaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaListViewController.swift; sourceTree = "<group>"; };
-		F1000CA9223B9C7C00778014 /* HiraganaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaModel.swift; sourceTree = "<group>"; };
-		F1000CAC223B9DAD00778014 /* HiraganaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaCollectionViewCell.swift; sourceTree = "<group>"; };
-		F1000CAE223BA31700778014 /* HiraganaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HiraganaCollectionViewCell.xib; sourceTree = "<group>"; };
+		F1000CA7223B966A00778014 /* AlphabetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetListViewController.swift; sourceTree = "<group>"; };
+		F1000CA9223B9C7C00778014 /* AlphabetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetModel.swift; sourceTree = "<group>"; };
+		F1000CAC223B9DAD00778014 /* AlphabetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1000CAE223BA31700778014 /* AlphabetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlphabetCollectionViewCell.xib; sourceTree = "<group>"; };
 		F106FE53223F9A8300AF569A /* CrosswordPuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordPuzzleViewController.swift; sourceTree = "<group>"; };
 		F106FE55223F9D1900AF569A /* CrosswordBlackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordBlackCollectionViewCell.swift; sourceTree = "<group>"; };
 		F106FE57223F9D6900AF569A /* CrosswordTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrosswordTextCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		F1CC586722422F710026616D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		F1CC5869224234BE0026616D /* CourseListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListCoordinator.swift; sourceTree = "<group>"; };
 		F1CC586B22423AF60026616D /* CourseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
-		F1CC586D22423DBD0026616D /* HiraganaListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaListCoordinator.swift; sourceTree = "<group>"; };
+		F1CC586D22423DBD0026616D /* AlphabetListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,22 +154,22 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
-		F1000C9E223B949800778014 /* Hiragana */ = {
+		F1000C9E223B949800778014 /* Alphabet */ = {
 			isa = PBXGroup;
 			children = (
-				F1CC586D22423DBD0026616D /* HiraganaListCoordinator.swift */,
+				F1CC586D22423DBD0026616D /* AlphabetListCoordinator.swift */,
 				F1000C9F223B94AB00778014 /* ViewController */,
 				F1000CA0223B94B200778014 /* View Model */,
 				F1000CA2223B95D300778014 /* Model */,
 				F1000CAB223B9D7400778014 /* View */,
 			);
-			path = Hiragana;
+			path = Alphabet;
 			sourceTree = "<group>";
 		};
 		F1000C9F223B94AB00778014 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F1000CA7223B966A00778014 /* HiraganaListViewController.swift */,
+				F1000CA7223B966A00778014 /* AlphabetListViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 		F1000CA2223B95D300778014 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F1000CA9223B9C7C00778014 /* HiraganaModel.swift */,
+				F1000CA9223B9C7C00778014 /* AlphabetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,8 +229,8 @@
 		F1000CAB223B9D7400778014 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F1000CAC223B9DAD00778014 /* HiraganaCollectionViewCell.swift */,
-				F1000CAE223BA31700778014 /* HiraganaCollectionViewCell.xib */,
+				F1000CAC223B9DAD00778014 /* AlphabetCollectionViewCell.swift */,
+				F1000CAE223BA31700778014 /* AlphabetCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				F1CC586722422F710026616D /* ApplicationCoordinator.swift */,
 				F1CC586522422C080026616D /* Coordinator.swift */,
 				F1000CA3223B95E100778014 /* Main */,
-				F1000C9E223B949800778014 /* Hiragana */,
+				F1000C9E223B949800778014 /* Alphabet */,
 				F106FE4E223F9A1200AF569A /* CrosswordPuzzle */,
 				F1000CA5223B960400778014 /* Resources */,
 				F1C088172238A92200CA9555 /* Main.storyboard */,
@@ -453,7 +453,7 @@
 			files = (
 				F106FE5C223F9D8000AF569A /* CrosswordTextCollectionViewCell.xib in Resources */,
 				F1000C93223A3AEF00778014 /* CourseTableViewCell.xib in Resources */,
-				F1000CAF223BA31700778014 /* HiraganaCollectionViewCell.xib in Resources */,
+				F1000CAF223BA31700778014 /* AlphabetCollectionViewCell.xib in Resources */,
 				F1000C9B223B8C6100778014 /* katakana.json in Resources */,
 				F1000C99223B8C5800778014 /* hiragana.json in Resources */,
 				F1C0881E2238A92300CA9555 /* LaunchScreen.storyboard in Resources */,
@@ -540,11 +540,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1000C91223A3A0600778014 /* CourseTableViewCell.swift in Sources */,
-				F1000CAA223B9C7C00778014 /* HiraganaModel.swift in Sources */,
+				F1000CAA223B9C7C00778014 /* AlphabetModel.swift in Sources */,
 				F1CC586622422C090026616D /* Coordinator.swift in Sources */,
-				F1CC586E22423DBD0026616D /* HiraganaListCoordinator.swift in Sources */,
-				F1000CAD223B9DAD00778014 /* HiraganaCollectionViewCell.swift in Sources */,
-				F1000CA8223B966A00778014 /* HiraganaListViewController.swift in Sources */,
+				F1CC586E22423DBD0026616D /* AlphabetListCoordinator.swift in Sources */,
+				F1000CAD223B9DAD00778014 /* AlphabetCollectionViewCell.swift in Sources */,
+				F1000CA8223B966A00778014 /* AlphabetListViewController.swift in Sources */,
 				F106FE58223F9D6900AF569A /* CrosswordTextCollectionViewCell.swift in Sources */,
 				F106FE5E2240844100AF569A /* CourseViewControllerViewModel.swift in Sources */,
 				F1000C96223A4CD200778014 /* CourseViewModel.swift in Sources */,

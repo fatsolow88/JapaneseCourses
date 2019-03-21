@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1609" y="709"/>
         </scene>
-        <!--Hiragana List View Controller-->
+        <!--Alphabet List View Controller-->
         <scene sceneID="blY-oc-5mV">
             <objects>
-                <viewController storyboardIdentifier="HiraganaListViewControllerSID" id="w98-3m-2hN" customClass="HiraganaListViewController" customModule="JapaneseCourses" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlphabetListViewControllerSID" id="w98-3m-2hN" customClass="AlphabetListViewController" customModule="JapaneseCourses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h8x-f6-fJI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

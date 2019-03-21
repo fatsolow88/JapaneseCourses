@@ -1,5 +1,5 @@
 //
-//  HiraganaModel.swift
+//  AlphabetModel.swift
 //  JapaneseCourses
 //
 //  Created by Low Wai Hong on 15/03/2019.
@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class HiraganaModel {
+class AlphabetModel {
     
     var char_id         = ""
     var character       = ""

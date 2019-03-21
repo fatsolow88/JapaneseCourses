@@ -1,5 +1,5 @@
 //
-//  HiraganaCollectionViewCell.swift
+//  AlphabetCollectionViewCell.swift
 //  JapaneseCourses
 //
 //  Created by Low Wai Hong on 15/03/2019.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class HiraganaCollectionViewCell: UICollectionViewCell {
+class AlphabetCollectionViewCell: UICollectionViewCell {
     
-    static let Identifier = "HiraganaCollectionViewCell"
+    static let Identifier = "AlphabetCollectionViewCell"
     
     @IBOutlet weak var textLabel : UILabel!
     
@@ -34,9 +34,9 @@ class HiraganaCollectionViewCell: UICollectionViewCell {
         
     }
     
-    var hiraganaModel: HiraganaModel! {
+    var alphabetModel: AlphabetModel! {
         didSet{
-            textLabel.text = hiraganaModel.character
+            textLabel.text = alphabetModel.character
         }
     }
 }

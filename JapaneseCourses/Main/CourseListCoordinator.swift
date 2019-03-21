@@ -13,7 +13,7 @@ class CourseListCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var courseListViewController: CourseListViewController?
     
-    private var hiraganaListCoordinator: HiraganaListCoordinator?
+    private var alphabetListCoordinator: AlphabetListCoordinator?
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
@@ -31,8 +31,8 @@ class CourseListCoordinator: Coordinator {
 extension CourseListCoordinator: CourseListViewControllerDelegate {
     func courseListViewControllerDidSelectCourse(selectedCourse: CourseViewModel) {
         
-        let hiraganaListCoordinator = HiraganaListCoordinator(presenter: presenter)
-        hiraganaListCoordinator.start()
-        self.hiraganaListCoordinator = hiraganaListCoordinator
+        let alphabetListCoordinator = AlphabetListCoordinator(presenter: presenter)
+        alphabetListCoordinator.start()
+        self.alphabetListCoordinator = alphabetListCoordinator
     }
 }

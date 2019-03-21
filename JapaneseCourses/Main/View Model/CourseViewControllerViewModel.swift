@@ -27,8 +27,8 @@ class CourseViewControllerViewModel {
     init() {
         courseModels.append(CourseModel(id:"course1", name: "Hiragana", numberOfLessons: 0))
         courseModels.append(CourseModel(id:"course2", name: "Katakana", numberOfLessons: 0))
-        courseModels.append(CourseModel(id:"course3", name: "Kanji", numberOfLessons: 1000))
-        courseModels.append(CourseModel(id:"course4", name: "Keigo", numberOfLessons: 2000))
+//        courseModels.append(CourseModel(id:"course3", name: "Kanji", numberOfLessons: 1000))
+//        courseModels.append(CourseModel(id:"course4", name: "Keigo", numberOfLessons: 2000))
     }
     
     var courseCells: Observable<[CourseTableViewCellType]> {

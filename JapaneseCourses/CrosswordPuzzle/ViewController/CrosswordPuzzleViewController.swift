@@ -17,11 +17,6 @@ class CrosswordPuzzleViewController: UIViewController, UICollectionViewDelegate,
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-//    private let disposeBag  = DisposeBag()
-//
-//    var hiraganaModels  = [HiraganaModel]()
-//    let dataSource  = BehaviorRelay(value: [HiraganaModel]())
-//
     override func viewDidLoad() {
         super.viewDidLoad()
         
