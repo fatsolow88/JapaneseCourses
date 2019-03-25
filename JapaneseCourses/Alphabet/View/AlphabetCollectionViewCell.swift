@@ -14,6 +14,7 @@ class AlphabetCollectionViewCell: UICollectionViewCell {
     static let Identifier = "AlphabetCollectionViewCell"
     
     @IBOutlet weak var textLabel : UILabel!
+    @IBOutlet weak var romajiLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,6 +38,7 @@ class AlphabetCollectionViewCell: UICollectionViewCell {
     var alphabetModel: AlphabetModel! {
         didSet{
             textLabel.text = alphabetModel.character
+            romajiLabel.text = alphabetModel.romanization
         }
     }
 }

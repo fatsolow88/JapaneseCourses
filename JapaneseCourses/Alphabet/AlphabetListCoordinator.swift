@@ -13,8 +13,10 @@ class AlphabetListCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var alphabetListViewController: AlphabetListViewController?
     private var courseListViewController: CourseListViewController?
-
-    init(presenter: UINavigationController) {
+    
+    private let alphabet: String
+    init(presenter: UINavigationController, alphabet: String) {
+        self.alphabet = alphabet
         self.presenter = presenter
         //place to pass data
     }
@@ -23,6 +25,7 @@ class AlphabetListCoordinator: Coordinator {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "AlphabetListViewControllerSID") as? AlphabetListViewController
         controller?.delegate = self
+        controller?.alphabet = self.alphabet
         presenter.pushViewController(controller ?? UIViewController(), animated: true)
         self.alphabetListViewController = controller
     }

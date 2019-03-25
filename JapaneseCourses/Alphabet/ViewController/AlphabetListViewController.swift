@@ -23,37 +23,43 @@ class AlphabetListViewController: UIViewController, UICollectionViewDelegate, UI
     weak var delegate: AlphabetListViewControllerDelegate?
     
     private let disposeBag  = DisposeBag()
+    
+    let viewModel: AlphabetListViewControllerViewModel = AlphabetListViewControllerViewModel()
 
-    var hiraganaModels  = [AlphabetModel]()
-    let dataSource  = BehaviorRelay(value: [AlphabetModel]())
+    var alphabet = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let path = Bundle.main.path(forResource: "hiragana", ofType: "json") {
-            let hiraganaArray = try! JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: path)), options: JSONSerialization.ReadingOptions()) as? [[String : String]]
-            
-            for hiraganaDict in hiraganaArray! {
-                hiraganaModels.append(AlphabetModel(char_id: hiraganaDict["char_id"] ?? "", character: hiraganaDict["character"] ?? "", romanization: hiraganaDict["romanization"] ?? ""))
-            }
-            
-        }
+       
+        viewModel.getAlphabets(alphabet: alphabet)
         
-        dataSource.accept(hiraganaModels)
-
         collectionView?.register(UINib(nibName: "AlphabetCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AlphabetCollectionViewCell.Identifier)
 
-        dataSource.asObservable().bind(to:collectionView.rx.items(cellIdentifier: AlphabetCollectionViewCell.Identifier, cellType: AlphabetCollectionViewCell.self)) { row, data, cell in
-                cell.alphabetModel = data
-            }.disposed(by: disposeBag)
-        
-        // add this line you can provide the cell size from delegate method
-        collectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        bindViewModel()
+        setupCellTapHandling()
         
         segmentedControl.rx.selectedSegmentIndex.subscribe (onNext: { index in
             self.selectedViewMode(index: index)
         }).disposed(by: disposeBag)
 
+    }
+    
+    func bindViewModel() {
+        viewModel.courseCells.bind(to: self.collectionView.rx.items) { collectionView, index, element in
+            let indexPath = IndexPath(item: index, section: 0)
+            
+            guard let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: AlphabetCollectionViewCell.Identifier, for: indexPath)  as? AlphabetCollectionViewCell else {
+                return AlphabetCollectionViewCell()
+            }
+            cell.alphabetModel = element
+            return cell
+            
+            }.disposed(by: disposeBag)
+    }
+    
+    private func setupCellTapHandling() {
+        collectionView.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
     func selectedViewMode(index: Int){

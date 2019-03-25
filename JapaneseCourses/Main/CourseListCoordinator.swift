@@ -31,7 +31,7 @@ class CourseListCoordinator: Coordinator {
 extension CourseListCoordinator: CourseListViewControllerDelegate {
     func courseListViewControllerDidSelectCourse(selectedCourse: CourseViewModel) {
         
-        let alphabetListCoordinator = AlphabetListCoordinator(presenter: presenter)
+        let alphabetListCoordinator = AlphabetListCoordinator(presenter: presenter, alphabet: selectedCourse.name)
         alphabetListCoordinator.start()
         self.alphabetListCoordinator = alphabetListCoordinator
     }
