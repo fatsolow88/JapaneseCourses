@@ -27,8 +27,7 @@ class CourseViewControllerViewModel {
     init() {
         courseModels.append(CourseModel(id:"course1", name: "Hiragana", numberOfLessons: 0))
         courseModels.append(CourseModel(id:"course2", name: "Katakana", numberOfLessons: 0))
-//        courseModels.append(CourseModel(id:"course3", name: "Kanji", numberOfLessons: 1000))
-//        courseModels.append(CourseModel(id:"course4", name: "Keigo", numberOfLessons: 2000))
+        courseModels.append(CourseModel(id:"course3", name: "Vocab", numberOfLessons: 0))
     }
     
     var courseCells: Observable<[CourseTableViewCellType]> {
@@ -42,8 +41,10 @@ class CourseViewControllerViewModel {
     }
 
     func getCourses() {
+        
         loadInProgress.accept(true)
         cells.accept(courseModels.compactMap {CourseTableViewCellType.normal(cellViewModel: CourseViewModel(course: $0 ))})
+        //compactMap help loop through models in courseModels
         loadInProgress.accept(false)
     }
 }

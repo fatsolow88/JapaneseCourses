@@ -1,8 +1,8 @@
 //
-//  VocabListViewControllerViewModel.swift
+//  VocabCategoryViewControllerViewModel.swift
 //  JapaneseCourses
 //
-//  Created by Low Wai Hong on 22/03/2019.
+//  Created by Low Wai Hong on 28/03/2019.
 //  Copyright © 2019 Low Wai Hong. All rights reserved.
 //
 
@@ -10,24 +10,25 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-enum VocabTableViewCellType {
-    case normal(cellViewModel: VocabModel)
+enum VocabCategoryCollectionViewCellType {
+    case normal(cellViewModel: VocabCategoryViewModel)
     case error(message: String)
     case empty
 }
 
-class VocabListViewControllerViewModel {
+class VocabCategoryViewControllerViewModel {
     
     //    let onShowError = PublishSubject<SingleButtonAlert>()
     let disposeBag = DisposeBag()
     private let loadInProgress = BehaviorRelay(value: false)
-    private let cells = BehaviorRelay<[VocabTableViewCellType]>(value: [])
+    private let cells = BehaviorRelay<[VocabCategoryCollectionViewCellType]>(value: [])
+    var vocabModels  = [VocabCategoryModel]()
     
     init() {
-
+//        vocabModels.append(VocabModel(vocab_id: "1", vocab: "ああ", romanization: "aa"))
     }
     
-    var courseCells: Observable<[VocabTableViewCellType]> {
+    var vocabCategoryCells: Observable<[VocabCategoryCollectionViewCellType]> {
         return cells.asObservable()
     }
     
@@ -37,11 +38,9 @@ class VocabListViewControllerViewModel {
             .distinctUntilChanged() //only emit when there's different value than current
     }
     
-    func getCourses() {
+    func getVocabCategory() {
         loadInProgress.accept(true)
-        
-        
-        
+//        cells.accept(vocabModels.compactMap{VocabTableViewCellType.normal(cellViewModel: VocabViewModel(vocabModel: $0))})
         loadInProgress.accept(false)
     }
 }

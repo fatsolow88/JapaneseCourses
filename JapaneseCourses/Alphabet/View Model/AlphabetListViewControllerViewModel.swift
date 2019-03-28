@@ -21,7 +21,7 @@ class AlphabetListViewControllerViewModel {
         
     }
     
-    var courseCells: Observable<[AlphabetModel]> {
+    var alphabetCells: Observable<[AlphabetModel]> {
         return cells.asObservable()
     }
     

@@ -15,6 +15,8 @@ class CourseListCoordinator: Coordinator {
     
     private var alphabetListCoordinator: AlphabetListCoordinator?
     
+    private var vocabListCoordinator: VocabListCoordinator?
+    
     init(presenter: UINavigationController) {
         self.presenter = presenter
     }
@@ -31,8 +33,14 @@ class CourseListCoordinator: Coordinator {
 extension CourseListCoordinator: CourseListViewControllerDelegate {
     func courseListViewControllerDidSelectCourse(selectedCourse: CourseViewModel) {
         
-        let alphabetListCoordinator = AlphabetListCoordinator(presenter: presenter, alphabet: selectedCourse.name)
-        alphabetListCoordinator.start()
-        self.alphabetListCoordinator = alphabetListCoordinator
+        if(selectedCourse.name == "Vocab"){
+            let vocabListCoordinator = VocabListCoordinator(presenter: presenter)
+            vocabListCoordinator.start()
+            self.vocabListCoordinator = vocabListCoordinator
+        }else{
+            let alphabetListCoordinator = AlphabetListCoordinator(presenter: presenter, alphabet: selectedCourse.name)
+            alphabetListCoordinator.start()
+            self.alphabetListCoordinator = alphabetListCoordinator
+        }
     }
 }

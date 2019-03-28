@@ -46,7 +46,7 @@ class AlphabetListViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     func bindViewModel() {
-        viewModel.courseCells.bind(to: self.collectionView.rx.items) { collectionView, index, element in
+        viewModel.alphabetCells.bind(to: self.collectionView.rx.items) { collectionView, index, element in
             let indexPath = IndexPath(item: index, section: 0)
             
             guard let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: AlphabetCollectionViewCell.Identifier, for: indexPath)  as? AlphabetCollectionViewCell else {

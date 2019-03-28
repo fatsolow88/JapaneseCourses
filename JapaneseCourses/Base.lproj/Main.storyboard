@@ -41,42 +41,35 @@
             </objects>
             <point key="canvasLocation" x="1608.8" y="27.436281859070466"/>
         </scene>
-        <!--Crossword Puzzle View Controller-->
-        <scene sceneID="KSz-Zq-i7y">
+        <!--Vocab List View Controller-->
+        <scene sceneID="GXB-Jz-qGJ">
             <objects>
-                <viewController storyboardIdentifier="CrosswordPuzzleViewControllerSID" id="uqZ-rH-dPX" customClass="CrosswordPuzzleViewController" customModule="JapaneseCourses" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bOD-ax-ktk">
+                <viewController storyboardIdentifier="VocabListViewControllerSID" id="fR0-fb-3kk" customClass="VocabListViewController" customModule="JapaneseCourses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rJB-HR-P1y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ij3-92-DNV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XBG-pf-ghe">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="40d-uQ-Gk0">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ij3-92-DNV" firstAttribute="trailing" secondItem="nlJ-nP-P0r" secondAttribute="trailing" id="H5Z-rX-8Pe"/>
-                            <constraint firstItem="Ij3-92-DNV" firstAttribute="bottom" secondItem="nlJ-nP-P0r" secondAttribute="bottom" id="sdQ-Ye-7YO"/>
-                            <constraint firstItem="Ij3-92-DNV" firstAttribute="top" secondItem="nlJ-nP-P0r" secondAttribute="top" id="uft-us-CVF"/>
-                            <constraint firstItem="Ij3-92-DNV" firstAttribute="leading" secondItem="nlJ-nP-P0r" secondAttribute="leading" id="xJp-5r-i08"/>
+                            <constraint firstItem="XBG-pf-ghe" firstAttribute="leading" secondItem="HSL-uJ-nEm" secondAttribute="leading" id="245-kc-ABH"/>
+                            <constraint firstItem="XBG-pf-ghe" firstAttribute="trailing" secondItem="HSL-uJ-nEm" secondAttribute="trailing" id="LgA-Fz-88m"/>
+                            <constraint firstItem="XBG-pf-ghe" firstAttribute="bottom" secondItem="HSL-uJ-nEm" secondAttribute="bottom" id="eMc-jL-aGD"/>
+                            <constraint firstItem="XBG-pf-ghe" firstAttribute="top" secondItem="HSL-uJ-nEm" secondAttribute="top" id="gDM-Sb-EK0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="nlJ-nP-P0r"/>
+                        <viewLayoutGuide key="safeArea" id="HSL-uJ-nEm"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="Ij3-92-DNV" id="rRT-rU-p8y"/>
+                        <outlet property="tableView" destination="XBG-pf-ghe" id="TWr-9Z-9wz"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TLp-My-3Xf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Jn-Z4-I1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="709"/>
+            <point key="canvasLocation" x="1606" y="712"/>
         </scene>
         <!--Alphabet List View Controller-->
         <scene sceneID="blY-oc-5mV">

@@ -12,7 +12,7 @@ import UIKit
 class AlphabetListCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var alphabetListViewController: AlphabetListViewController?
-    private var courseListViewController: CourseListViewController?
+//    private var courseListViewController: CourseListViewController?
     
     private let alphabet: String
     init(presenter: UINavigationController, alphabet: String) {

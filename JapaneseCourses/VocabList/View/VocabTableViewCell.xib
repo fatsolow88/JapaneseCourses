@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="VocabTableViewCell" customModule="JapaneseCourses" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5c-pQ-4yf">
+                        <rect key="frame" x="268" y="12.5" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="qXL-L4-aMH"/>
+                            <constraint firstAttribute="width" secondItem="O5c-pQ-4yf" secondAttribute="height" multiplier="1:1" id="yk6-g3-Qk0"/>
+                        </constraints>
+                        <state key="normal" title="Fav"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cO-vf-P1l" userLabel="labelContainerView">
+                        <rect key="frame" x="20" y="14.5" width="240" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiragana" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iN-Sc-qyf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romaji" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HN-AY-36D">
+                                <rect key="frame" x="0.0" y="20.5" width="240" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2iN-Sc-qyf" firstAttribute="top" secondItem="7cO-vf-P1l" secondAttribute="top" id="6GL-5O-to5"/>
+                            <constraint firstAttribute="trailing" secondItem="2iN-Sc-qyf" secondAttribute="trailing" id="GUp-oX-RYz"/>
+                            <constraint firstAttribute="trailing" secondItem="4HN-AY-36D" secondAttribute="trailing" id="Pof-tk-mx4"/>
+                            <constraint firstAttribute="bottom" secondItem="4HN-AY-36D" secondAttribute="bottom" id="Zu0-DV-mU0"/>
+                            <constraint firstItem="4HN-AY-36D" firstAttribute="top" secondItem="2iN-Sc-qyf" secondAttribute="bottom" id="dv2-Mz-9hl"/>
+                            <constraint firstItem="4HN-AY-36D" firstAttribute="leading" secondItem="7cO-vf-P1l" secondAttribute="leading" id="tM3-jT-2pr"/>
+                            <constraint firstItem="2iN-Sc-qyf" firstAttribute="leading" secondItem="7cO-vf-P1l" secondAttribute="leading" id="x1T-wi-2Y8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="7cO-vf-P1l" secondAttribute="bottom" constant="14" id="KP7-Q1-zBf"/>
+                    <constraint firstItem="7cO-vf-P1l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mN4-N5-FCI"/>
+                    <constraint firstItem="7cO-vf-P1l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14.5" id="maK-3d-VrC"/>
+                    <constraint firstItem="O5c-pQ-4yf" firstAttribute="leading" secondItem="7cO-vf-P1l" secondAttribute="trailing" constant="8" id="wdA-zf-T15"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="O5c-pQ-4yf" secondAttribute="trailing" constant="7" id="89d-x2-iZp"/>
+                <constraint firstItem="O5c-pQ-4yf" firstAttribute="centerY" secondItem="njF-e1-oar" secondAttribute="centerY" id="XRR-QL-h8e"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favoriteButton" destination="O5c-pQ-4yf" id="WX6-3G-1zH"/>
+                <outlet property="hiraganaLabel" destination="2iN-Sc-qyf" id="y8s-4n-ZrJ"/>
+                <outlet property="romajiLabel" destination="4HN-AY-36D" id="JUR-Mq-CIT"/>
+            </connections>
+            <point key="canvasLocation" x="8" y="-3"/>
+        </tableViewCell>
+    </objects>
+</document>
