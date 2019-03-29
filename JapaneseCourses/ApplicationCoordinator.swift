@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class ApplicationCoordinator: Coordinator {
     let window: UIWindow
@@ -23,6 +24,9 @@ class ApplicationCoordinator: Coordinator {
     }
     
     func start() {  // 6
+
+        FirebaseApp.configure()
+
         window.rootViewController = rootViewController
         courseListCoordinator.start()
         window.makeKeyAndVisible()

@@ -18,6 +18,7 @@
 		F1000CAD223B9DAD00778014 /* AlphabetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1000CAC223B9DAD00778014 /* AlphabetCollectionViewCell.swift */; };
 		F1000CAF223BA31700778014 /* AlphabetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1000CAE223BA31700778014 /* AlphabetCollectionViewCell.xib */; };
 		F106FE5E2240844100AF569A /* CourseViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106FE5D2240844100AF569A /* CourseViewControllerViewModel.swift */; };
+		F10BBB5C224DFDD100603B98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F10BBB5B224DFDD000603B98 /* GoogleService-Info.plist */; };
 		F11120DC2244D58800CCE1F3 /* AlphabetListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11120DB2244D58800CCE1F3 /* AlphabetListViewControllerViewModel.swift */; };
 		F11120DE2244DEC700CCE1F3 /* VocabListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11120DD2244DEC700CCE1F3 /* VocabListViewController.swift */; };
 		F11120E02244DEDF00CCE1F3 /* VocabListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11120DF2244DEDF00CCE1F3 /* VocabListViewControllerViewModel.swift */; };
@@ -78,6 +79,7 @@
 		F1000CAC223B9DAD00778014 /* AlphabetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1000CAE223BA31700778014 /* AlphabetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlphabetCollectionViewCell.xib; sourceTree = "<group>"; };
 		F106FE5D2240844100AF569A /* CourseViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewControllerViewModel.swift; sourceTree = "<group>"; };
+		F10BBB5B224DFDD000603B98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F11120DB2244D58800CCE1F3 /* AlphabetListViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetListViewControllerViewModel.swift; sourceTree = "<group>"; };
 		F11120DD2244DEC700CCE1F3 /* VocabListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabListViewController.swift; sourceTree = "<group>"; };
 		F11120DF2244DEDF00CCE1F3 /* VocabListViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabListViewControllerViewModel.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 		F1C088122238A92200CA9555 /* JapaneseCourses */ = {
 			isa = PBXGroup;
 			children = (
+				F10BBB5B224DFDD000603B98 /* GoogleService-Info.plist */,
 				F1C088132238A92200CA9555 /* AppDelegate.swift */,
 				F1CC586722422F710026616D /* ApplicationCoordinator.swift */,
 				F1CC586522422C080026616D /* Coordinator.swift */,
@@ -528,6 +531,7 @@
 				F1000C99223B8C5800778014 /* Hiragana.json in Resources */,
 				F1D7B492224B7EBD00C8C861 /* VocabTableViewCell.xib in Resources */,
 				F1C0881E2238A92300CA9555 /* LaunchScreen.storyboard in Resources */,
+				F10BBB5C224DFDD100603B98 /* GoogleService-Info.plist in Resources */,
 				F1C0881B2238A92300CA9555 /* Assets.xcassets in Resources */,
 				F1C088192238A92200CA9555 /* Main.storyboard in Resources */,
 			);
@@ -581,21 +585,37 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-JapaneseCourses/Pods-JapaneseCourses-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/CrosswordsGenerator/CrosswordsGenerator.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CrosswordsGenerator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

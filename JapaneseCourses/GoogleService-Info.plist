@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>970961784632-4af9jaj4a4h7be27pijt943373br02af.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.970961784632-4af9jaj4a4h7be27pijt943373br02af</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDon2OcrbckNm7i6-kseuRO3BYr8hYS4p4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>970961784632</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>wh.JapaneseCourses</string>
+	<key>PROJECT_ID</key>
+	<string>kcjapanesecourses</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kcjapanesecourses.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:970961784632:ios:7049e184a73644b4</string>
+	<key>DATABASE_URL</key>
+	<string>https://kcjapanesecourses.firebaseio.com</string>
+</dict>
+</plist>

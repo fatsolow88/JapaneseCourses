@@ -10,5 +10,8 @@ target 'JapaneseCourses' do
 	pod 'RxCocoa',    '~> 4.0'
 	pod 'SnapKit',    '~> 4.0.0'
 	pod 'CrosswordsGenerator'
+	pod 'Firebase/Core'
+	pod 'Firebase/Firestore'
+	pod 'PKHUD', '~> 5.0'
     # Pods for MGSaaS    
 end

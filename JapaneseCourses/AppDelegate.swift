@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.applicationCoordinator = applicationCoordinator
         
         applicationCoordinator.start()  // 3
+        
+    
         return true
     }
     

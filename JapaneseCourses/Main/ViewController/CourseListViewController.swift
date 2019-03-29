@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
-
+import PKHUD
 
 protocol CourseListViewControllerDelegate: class {
     func courseListViewControllerDidSelectCourse(selectedCourse: CourseViewModel)
@@ -23,7 +23,7 @@ class CourseListViewController: UIViewController, UITableViewDelegate {
     
     let viewModel: CourseViewControllerViewModel = CourseViewControllerViewModel()
     private let disposeBag  = DisposeBag()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +33,7 @@ class CourseListViewController: UIViewController, UITableViewDelegate {
         setupCellTapHandling()
         
         viewModel.getCourses()
+        
     }
     
     func bindViewModel() {
@@ -64,11 +65,11 @@ class CourseListViewController: UIViewController, UITableViewDelegate {
 //            .subscribe()
 //            .disposed(by: disposeBag)
         
-//        viewModel
-//            .onShowLoadingHud
-//            .map { [weak self] in self?.setLoadingHud(visible: $0) }
-//            .subscribe()
-//            .disposed(by: disposeBag)
+        viewModel
+            .onShowLoadingHud
+            .map { [weak self] in self?.setLoadingHud(visible: $0) }
+            .subscribe()
+            .disposed(by: disposeBag)
     }
     
     private func setupCellTapHandling() {
@@ -86,6 +87,11 @@ class CourseListViewController: UIViewController, UITableViewDelegate {
                 }
             )
             .disposed(by: disposeBag)
+    }
+    
+    private func setLoadingHud(visible: Bool) {
+        PKHUD.sharedHUD.contentView = PKHUDSystemActivityIndicatorView()
+        visible ? PKHUD.sharedHUD.show(onView: view) : PKHUD.sharedHUD.hide()
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
