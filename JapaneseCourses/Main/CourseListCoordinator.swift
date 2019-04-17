@@ -17,6 +17,10 @@ class CourseListCoordinator: Coordinator {
     
     private var vocabListCoordinator: VocabListCoordinator?
     
+    private var vocabCategoryCoordinator: VocabCategoryCoordinator?
+    
+    private var newWordCoordinator: NewWordCoordinator?
+    
     init(presenter: UINavigationController) {
         self.presenter = presenter
     }
@@ -38,9 +42,18 @@ extension CourseListCoordinator: CourseListViewControllerDelegate {
             vocabListCoordinator.start()
             self.vocabListCoordinator = vocabListCoordinator
         }else{
-            let alphabetListCoordinator = AlphabetListCoordinator(presenter: presenter, alphabet: selectedCourse.name)
-            alphabetListCoordinator.start()
-            self.alphabetListCoordinator = alphabetListCoordinator
+//            let alphabetListCoordinator = AlphabetListCoordinator(presenter: presenter, alphabet: selectedCourse.name)
+//            alphabetListCoordinator.start()
+//            self.alphabetListCoordinator = alphabetListCoordinator
+         
+//            let vocabCategoryCoordinator = VocabCategoryCoordinator(presenter: presenter)
+//            vocabCategoryCoordinator.start()
+//            self.vocabCategoryCoordinator = vocabCategoryCoordinator
+            
+            let newWordCoordinator = NewWordCoordinator(presenter: presenter)
+            newWordCoordinator.start()
+            self.newWordCoordinator = newWordCoordinator
+    
         }
     }
 }

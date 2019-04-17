@@ -10,10 +10,16 @@ import UIKit
 import RxCocoa
 import RxSwift
 
+protocol VocabCategoryViewControllerDelegate: class {
+    func vocabCategoryViewControllerDidSelectCategory(selectedModel: VocabCategoryViewModel)
+}
+
 class VocabCategoryViewController: UIViewController,UICollectionViewDelegate {
 
     private let disposeBag  = DisposeBag()
     let viewModel: VocabCategoryViewControllerViewModel = VocabCategoryViewControllerViewModel()
+
+    weak var delegate: VocabCategoryViewControllerDelegate?
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -21,6 +27,13 @@ class VocabCategoryViewController: UIViewController,UICollectionViewDelegate {
         super.viewDidLoad()
 
         collectionView?.register(UINib(nibName: "VocabCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: VocabCategoryCollectionViewCell.Identifier)
+        
+        collectionView?.contentInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        // Set the PinterestLayout delegate
+        if let layout = collectionView?.collectionViewLayout as? VocabCategoryLayout {
+            layout.delegate = self
+        }
+        
         bindViewModel()
         setupCellTapHandling()
         
@@ -54,18 +67,30 @@ class VocabCategoryViewController: UIViewController,UICollectionViewDelegate {
     }
     
     private func setupCellTapHandling() {
-        collectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        collectionView
+            .rx
+            .modelSelected(VocabCategoryCollectionViewCellType.self)
+            .subscribe(
+                onNext: { [weak self] courseCellType in
+                    if case let .normal(viewModel) = courseCellType {
+                        self?.delegate?.vocabCategoryViewControllerDidSelectCategory(selectedModel: viewModel)
+                    }
+                }
+            )
+            .disposed(by: disposeBag)
+    }
+}
+
+//MARK: - LAYOUT DELEGATE
+extension VocabCategoryViewController : VocabCategoryLayoutDelegate {
+    
+    // 1. Returns the height
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
+        
+        let number = Int.random(in: 10 ... 20)
+        
+        return  CGFloat(number * 10)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -14,7 +14,6 @@ struct VocabViewModel {
     let vocab : String
     let romanization : String
     
-    // Dependency Injection (DI)
     init(vocabModel: VocabModel) {
         self.vocab_id = vocabModel.vocab_id
         self.vocab = vocabModel.vocab

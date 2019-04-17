@@ -22,10 +22,15 @@ class VocabCategoryViewControllerViewModel {
     let disposeBag = DisposeBag()
     private let loadInProgress = BehaviorRelay(value: false)
     private let cells = BehaviorRelay<[VocabCategoryCollectionViewCellType]>(value: [])
-    var vocabModels  = [VocabCategoryModel]()
+    var vocabCategoryModels  = [VocabCategoryModel]()
     
     init() {
-//        vocabModels.append(VocabModel(vocab_id: "1", vocab: "ああ", romanization: "aa"))
+        vocabCategoryModels.append(VocabCategoryModel(category_id: "1", category_Name: "Handshake", imageName: ""))
+        vocabCategoryModels.append(VocabCategoryModel(category_id: "2", category_Name: "2shot", imageName: ""))
+        vocabCategoryModels.append(VocabCategoryModel(category_id: "3", category_Name: "Concert", imageName: ""))
+        vocabCategoryModels.append(VocabCategoryModel(category_id: "4", category_Name: "Theater", imageName: ""))
+        vocabCategoryModels.append(VocabCategoryModel(category_id: "5", category_Name: "Performance", imageName: ""))
+        vocabCategoryModels.append(VocabCategoryModel(category_id: "6", category_Name: "Blog", imageName: ""))
     }
     
     var vocabCategoryCells: Observable<[VocabCategoryCollectionViewCellType]> {
@@ -40,7 +45,7 @@ class VocabCategoryViewControllerViewModel {
     
     func getVocabCategory() {
         loadInProgress.accept(true)
-//        cells.accept(vocabModels.compactMap{VocabTableViewCellType.normal(cellViewModel: VocabViewModel(vocabModel: $0))})
+        cells.accept(vocabCategoryModels.compactMap{VocabCategoryCollectionViewCellType.normal(cellViewModel: VocabCategoryViewModel(vocabCategoryModel: $0))})
         loadInProgress.accept(false)
     }
 }

@@ -19,7 +19,14 @@ class VocabCategoryCoordinator: Coordinator {
     func start() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "VocabCategoryViewControllerSID") as? VocabCategoryViewController
+        controller?.delegate = self
         presenter.pushViewController(controller ?? UIViewController(), animated: true)
         self.vocabCategoryViewController = controller
+    }
+}
+
+extension VocabCategoryCoordinator: VocabCategoryViewControllerDelegate {
+    func vocabCategoryViewControllerDidSelectCategory(selectedModel: VocabCategoryViewModel) {
+        
     }
 }

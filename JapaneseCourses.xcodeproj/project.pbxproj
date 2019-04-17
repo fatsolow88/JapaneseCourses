@@ -23,6 +23,17 @@
 		F11120DE2244DEC700CCE1F3 /* VocabListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11120DD2244DEC700CCE1F3 /* VocabListViewController.swift */; };
 		F11120E02244DEDF00CCE1F3 /* VocabListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11120DF2244DEDF00CCE1F3 /* VocabListViewControllerViewModel.swift */; };
 		F11120E22244DEFE00CCE1F3 /* VocabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11120E12244DEFE00CCE1F3 /* VocabModel.swift */; };
+		F118B7612256008C00469483 /* VocabCategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118B7602256008C00469483 /* VocabCategoryLayout.swift */; };
+		F1997D212266FD100036222C /* NewWordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1997D202266FD100036222C /* NewWordCoordinator.swift */; };
+		F1997D252266FD9E0036222C /* NewWordViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1997D242266FD9E0036222C /* NewWordViewControllerViewModel.swift */; };
+		F1997D282266FEBD0036222C /* NewWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1997D272266FEBD0036222C /* NewWordViewController.swift */; };
+		F1997D2A226707290036222C /* NewWordCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1997D29226707290036222C /* NewWordCellViewModel.swift */; };
+		F1997D2D226718750036222C /* NewWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1997D2B226718750036222C /* NewWordTableViewCell.swift */; };
+		F1997D2E226718750036222C /* NewWordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1997D2C226718750036222C /* NewWordTableViewCell.xib */; };
+		F1BD659E226575A700228B58 /* AddNewWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD659D226575A700228B58 /* AddNewWordViewController.swift */; };
+		F1BD65A0226575D900228B58 /* AddNewWordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD659F226575D900228B58 /* AddNewWordCoordinator.swift */; };
+		F1BD65A22265795C00228B58 /* AddNewWordViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD65A12265795C00228B58 /* AddNewWordViewControllerViewModel.swift */; };
+		F1BD65A6226579E800228B58 /* NewWordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD65A5226579E800228B58 /* NewWordModel.swift */; };
 		F1C088142238A92200CA9555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C088132238A92200CA9555 /* AppDelegate.swift */; };
 		F1C088192238A92200CA9555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1C088172238A92200CA9555 /* Main.storyboard */; };
 		F1C0881B2238A92300CA9555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1C0881A2238A92300CA9555 /* Assets.xcassets */; };
@@ -84,6 +95,17 @@
 		F11120DD2244DEC700CCE1F3 /* VocabListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabListViewController.swift; sourceTree = "<group>"; };
 		F11120DF2244DEDF00CCE1F3 /* VocabListViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabListViewControllerViewModel.swift; sourceTree = "<group>"; };
 		F11120E12244DEFE00CCE1F3 /* VocabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabModel.swift; sourceTree = "<group>"; };
+		F118B7602256008C00469483 /* VocabCategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabCategoryLayout.swift; sourceTree = "<group>"; };
+		F1997D202266FD100036222C /* NewWordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordCoordinator.swift; sourceTree = "<group>"; };
+		F1997D242266FD9E0036222C /* NewWordViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewControllerViewModel.swift; sourceTree = "<group>"; };
+		F1997D272266FEBD0036222C /* NewWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordViewController.swift; sourceTree = "<group>"; };
+		F1997D29226707290036222C /* NewWordCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordCellViewModel.swift; sourceTree = "<group>"; };
+		F1997D2B226718750036222C /* NewWordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordTableViewCell.swift; sourceTree = "<group>"; };
+		F1997D2C226718750036222C /* NewWordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewWordTableViewCell.xib; sourceTree = "<group>"; };
+		F1BD659D226575A700228B58 /* AddNewWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWordViewController.swift; sourceTree = "<group>"; };
+		F1BD659F226575D900228B58 /* AddNewWordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWordCoordinator.swift; sourceTree = "<group>"; };
+		F1BD65A12265795C00228B58 /* AddNewWordViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWordViewControllerViewModel.swift; sourceTree = "<group>"; };
+		F1BD65A5226579E800228B58 /* NewWordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordModel.swift; sourceTree = "<group>"; };
 		F1C088102238A92200CA9555 /* JapaneseCourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseCourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C088132238A92200CA9555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1C088182238A92200CA9555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -304,6 +326,103 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F1997D1B2266FC9E0036222C /* NewWord */ = {
+			isa = PBXGroup;
+			children = (
+				F1997D202266FD100036222C /* NewWordCoordinator.swift */,
+				F1997D1C2266FCB80036222C /* ViewController */,
+				F1997D1D2266FCCD0036222C /* ViewModel */,
+				F1997D1E2266FCD40036222C /* Model */,
+				F1997D1F2266FCE40036222C /* View */,
+			);
+			path = NewWord;
+			sourceTree = "<group>";
+		};
+		F1997D1C2266FCB80036222C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1997D272266FEBD0036222C /* NewWordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F1997D1D2266FCCD0036222C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F1997D242266FD9E0036222C /* NewWordViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F1997D1E2266FCD40036222C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1997D1F2266FCE40036222C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1997D2B226718750036222C /* NewWordTableViewCell.swift */,
+				F1997D2C226718750036222C /* NewWordTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1997D262266FDEB0036222C /* Word */ = {
+			isa = PBXGroup;
+			children = (
+				F1BD65A5226579E800228B58 /* NewWordModel.swift */,
+				F1997D29226707290036222C /* NewWordCellViewModel.swift */,
+				F1997D1B2266FC9E0036222C /* NewWord */,
+				F1BD659822656E2600228B58 /* AddNewWord */,
+			);
+			path = Word;
+			sourceTree = "<group>";
+		};
+		F1BD659822656E2600228B58 /* AddNewWord */ = {
+			isa = PBXGroup;
+			children = (
+				F1BD659F226575D900228B58 /* AddNewWordCoordinator.swift */,
+				F1BD659C22656E5600228B58 /* ViewController */,
+				F1BD659B22656E5100228B58 /* VIewModel */,
+				F1BD659A22656E4D00228B58 /* Model */,
+				F1BD659922656E4900228B58 /* View */,
+			);
+			path = AddNewWord;
+			sourceTree = "<group>";
+		};
+		F1BD659922656E4900228B58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1BD659A22656E4D00228B58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1BD659B22656E5100228B58 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F1BD65A12265795C00228B58 /* AddNewWordViewControllerViewModel.swift */,
+			);
+			path = VIewModel;
+			sourceTree = "<group>";
+		};
+		F1BD659C22656E5600228B58 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1BD659D226575A700228B58 /* AddNewWordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		F1C088072238A92200CA9555 = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +456,7 @@
 				F1000C9E223B949800778014 /* Alphabet */,
 				F1D7B497224CB6E500C8C861 /* VocabCategory */,
 				F11120D62244CF2100CCE1F3 /* VocabList */,
+				F1997D262266FDEB0036222C /* Word */,
 				F1000CA5223B960400778014 /* Resources */,
 				F1C088172238A92200CA9555 /* Main.storyboard */,
 				F1C0881A2238A92300CA9555 /* Assets.xcassets */,
@@ -375,6 +495,7 @@
 		F1D7B497224CB6E500C8C861 /* VocabCategory */ = {
 			isa = PBXGroup;
 			children = (
+				F118B7602256008C00469483 /* VocabCategoryLayout.swift */,
 				F1D7B4A8224CC9E000C8C861 /* VocabCategoryCoordinator.swift */,
 				F1D7B498224CB6F100C8C861 /* ViewController */,
 				F1D7B49B224CB70800C8C861 /* View Model */,
@@ -532,6 +653,7 @@
 				F1D7B492224B7EBD00C8C861 /* VocabTableViewCell.xib in Resources */,
 				F1C0881E2238A92300CA9555 /* LaunchScreen.storyboard in Resources */,
 				F10BBB5C224DFDD100603B98 /* GoogleService-Info.plist in Resources */,
+				F1997D2E226718750036222C /* NewWordTableViewCell.xib in Resources */,
 				F1C0881B2238A92300CA9555 /* Assets.xcassets in Resources */,
 				F1C088192238A92200CA9555 /* Main.storyboard in Resources */,
 			);
@@ -629,9 +751,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1997D2A226707290036222C /* NewWordCellViewModel.swift in Sources */,
+				F1BD65A0226575D900228B58 /* AddNewWordCoordinator.swift in Sources */,
 				F1D7B496224CA2DE00C8C861 /* VocabListCoordinator.swift in Sources */,
 				F1000C91223A3A0600778014 /* CourseTableViewCell.swift in Sources */,
+				F1997D282266FEBD0036222C /* NewWordViewController.swift in Sources */,
 				F1D7B4A9224CC9E000C8C861 /* VocabCategoryCoordinator.swift in Sources */,
+				F1BD65A6226579E800228B58 /* NewWordModel.swift in Sources */,
 				F1000CAA223B9C7C00778014 /* AlphabetModel.swift in Sources */,
 				F1CC586622422C090026616D /* Coordinator.swift in Sources */,
 				F1D7B49F224CB7D900C8C861 /* VocabCategoryViewControllerViewModel.swift in Sources */,
@@ -639,6 +765,8 @@
 				F1D7B491224B7EBD00C8C861 /* VocabTableViewCell.swift in Sources */,
 				F11120DE2244DEC700CCE1F3 /* VocabListViewController.swift in Sources */,
 				F1D7B4A6224CB82400C8C861 /* VocabCategoryCollectionViewCell.swift in Sources */,
+				F118B7612256008C00469483 /* VocabCategoryLayout.swift in Sources */,
+				F1BD65A22265795C00228B58 /* AddNewWordViewControllerViewModel.swift in Sources */,
 				F1000CAD223B9DAD00778014 /* AlphabetCollectionViewCell.swift in Sources */,
 				F1000CA8223B966A00778014 /* AlphabetListViewController.swift in Sources */,
 				F106FE5E2240844100AF569A /* CourseViewControllerViewModel.swift in Sources */,
@@ -647,13 +775,17 @@
 				F1D7B4A1224CB7E900C8C861 /* VocabCategoryViewModel.swift in Sources */,
 				F11120E02244DEDF00CCE1F3 /* VocabListViewControllerViewModel.swift in Sources */,
 				F11120DC2244D58800CCE1F3 /* AlphabetListViewControllerViewModel.swift in Sources */,
+				F1BD659E226575A700228B58 /* AddNewWordViewController.swift in Sources */,
 				F1D7B494224CA2A900C8C861 /* VocabViewModel.swift in Sources */,
 				F11120E22244DEFE00CCE1F3 /* VocabModel.swift in Sources */,
 				F1CC586C22423AF60026616D /* CourseListViewController.swift in Sources */,
 				F1D7B49D224CB73400C8C861 /* VocabCategoryViewController.swift in Sources */,
 				F1C088142238A92200CA9555 /* AppDelegate.swift in Sources */,
 				F1C088502239092A00CA9555 /* CourseModel.swift in Sources */,
+				F1997D212266FD100036222C /* NewWordCoordinator.swift in Sources */,
 				F1D7B4A3224CB7F800C8C861 /* VocabCategoryModel.swift in Sources */,
+				F1997D252266FD9E0036222C /* NewWordViewControllerViewModel.swift in Sources */,
+				F1997D2D226718750036222C /* NewWordTableViewCell.swift in Sources */,
 				F1CC586822422F710026616D /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

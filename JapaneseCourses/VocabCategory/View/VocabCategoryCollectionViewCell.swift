@@ -11,7 +11,10 @@ import UIKit
 class VocabCategoryCollectionViewCell: UICollectionViewCell {
 
     static let Identifier = "VocabCategoryCollectionViewCell"
-
+    
+    @IBOutlet weak var imageView : UIImageView!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,7 +22,7 @@ class VocabCategoryCollectionViewCell: UICollectionViewCell {
 
     var vocabCategoryViewModel: VocabCategoryViewModel! {
         didSet{
-            //
+            categoryLabel.text = vocabCategoryViewModel.category_Name
         }
     }
 }

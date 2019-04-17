@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import JapaneseCourses
+//@testable import JapaneseCourses
 
 class JapaneseCoursesTests: XCTestCase {
 
@@ -31,18 +31,18 @@ class JapaneseCoursesTests: XCTestCase {
         }
     }
 
-    func testCourseViewModel(){
-        let course = CourseModel(id: "0", name: "Hiragana", numberOfLessons: 1000)
-        let courseViewModel = CourseViewModel(course: course)
-        
-        XCTAssertEqual(course.name, courseViewModel.name)
-        XCTAssertEqual("More than 100 courses", courseViewModel.numberOfLessonsString)
-        
-        let courseTwo = CourseModel(id: "0", name: "Katakana", numberOfLessons: 100)
-        let courseViewModelTwo = CourseViewModel(course: courseTwo)
-        
-        XCTAssertEqual(courseTwo.name, courseViewModelTwo.name)
-        XCTAssertEqual("\(courseTwo.numberOfLessons)" + " courses", courseViewModelTwo.numberOfLessonsString)
-        
-    }
+//    func testCourseViewModel(){
+//        let course = CourseModel(id: "0", name: "Hiragana", numberOfLessons: 1000)
+//        let courseViewModel = CourseViewModel(course: course)
+//
+//        XCTAssertEqual(course.name, courseViewModel.name)
+//        XCTAssertEqual("More than 100 courses", courseViewModel.numberOfLessonsString)
+//
+//        let courseTwo = CourseModel(id: "0", name: "Katakana", numberOfLessons: 100)
+//        let courseViewModelTwo = CourseViewModel(course: courseTwo)
+//
+//        XCTAssertEqual(courseTwo.name, courseViewModelTwo.name)
+//        XCTAssertEqual("\(courseTwo.numberOfLessons)" + " courses", courseViewModelTwo.numberOfLessonsString)
+//
+//    }
 }
