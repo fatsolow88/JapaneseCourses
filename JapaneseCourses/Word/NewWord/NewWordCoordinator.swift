@@ -11,14 +11,18 @@ class NewWordCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var newWordViewController: NewWordViewController?
     
+    var rootViewController: UIViewController {
+        return newWordViewController!
+    }
+    
     init(presenter: UINavigationController) {
         self.presenter = presenter
     }
     
     func start() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "NewWordViewControllerSID") as? NewWordViewController
-        presenter.pushViewController(controller ?? UIViewController(), animated: true)
+        let controller = NewWordViewController.instantiate()
+//        controller.delegate = self
+//        presenter.pushViewController(controller ?? UIViewController(), animated: true)
         self.newWordViewController = controller
     }
 }

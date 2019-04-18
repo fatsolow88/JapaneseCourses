@@ -15,7 +15,7 @@ protocol NewWordViewControllerDelegate: class {
     func newWordViewControllerDidSelectWord(selectedWord: NewWordCellViewModel)
 }
 
-class NewWordViewController: UIViewController, UITableViewDelegate {
+class NewWordViewController: UIViewController, UITableViewDelegate, Storyboarded {
 
     @IBOutlet weak var tableView: UITableView!
     

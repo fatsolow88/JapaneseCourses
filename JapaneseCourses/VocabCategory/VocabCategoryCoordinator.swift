@@ -12,6 +12,10 @@ class VocabCategoryCoordinator: Coordinator {
     private let presenter: UINavigationController
     private var vocabCategoryViewController: VocabCategoryViewController?
     
+    var rootViewController: UIViewController {
+        return vocabCategoryViewController!
+    }
+    
     init(presenter: UINavigationController) {
         self.presenter = presenter
     }
@@ -20,7 +24,7 @@ class VocabCategoryCoordinator: Coordinator {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "VocabCategoryViewControllerSID") as? VocabCategoryViewController
         controller?.delegate = self
-        presenter.pushViewController(controller ?? UIViewController(), animated: true)
+//        presenter.pushViewController(controller ?? UIViewController(), animated: true)
         self.vocabCategoryViewController = controller
     }
 }

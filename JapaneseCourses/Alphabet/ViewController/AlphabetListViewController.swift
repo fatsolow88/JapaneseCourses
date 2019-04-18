@@ -31,7 +31,6 @@ class AlphabetListViewController: UIViewController, UICollectionViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
         viewModel.getAlphabets(alphabet: alphabet)
         
         collectionView?.register(UINib(nibName: "AlphabetCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AlphabetCollectionViewCell.Identifier)

@@ -15,7 +15,7 @@ protocol CourseListViewControllerDelegate: class {
     func courseListViewControllerDidSelectCourse(selectedCourse: CourseViewModel)
 }
 
-class CourseListViewController: UIViewController, UITableViewDelegate {
+class CourseListViewController: UIViewController, UITableViewDelegate, Storyboarded {
 
     @IBOutlet weak var tableView: UITableView!
 
