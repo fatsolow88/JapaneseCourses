@@ -11,7 +11,11 @@ import RxSwift
 import RxCocoa
 import PKHUD
 
-class AddNewWordViewController: UIViewController {
+protocol AddNewWordViewControllerDelegate: class {
+    func addedNewWordModel(newWordModel: NewWordModel)
+}
+
+class AddNewWordViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var textFieldRomaji: UITextField!
     @IBOutlet weak var textFieldHiragana: UITextField!
@@ -19,6 +23,8 @@ class AddNewWordViewController: UIViewController {
     
     var viewModel: AddNewWordViewControllerViewModel?
     var updateFriends = PublishSubject<Void>()
+    
+    weak var delegate: AddNewWordViewControllerDelegate?
     
     let disposeBag = DisposeBag()
     
@@ -57,7 +63,8 @@ class AddNewWordViewController: UIViewController {
             .onNavigateBack
             .subscribe(
                 onNext: { [weak self] in
-                    self?.updateFriends.onNext(())
+                    self?.delegate?.addedNewWordModel(newWordModel: NewWordModel(word_id: viewModel.newID, word_romaji: viewModel.romaji.value, word_hiragana: viewModel.hiragana.value))
+                    
                     let _ = self?.navigationController?.popViewController(animated: true)
                 }
             ).disposed(by: disposeBag)

@@ -27,5 +27,4 @@ struct NewWordCellViewModel {
         
         self.created_date = formatter.string(from: newWordModel.created_date)
     }
-    
 }

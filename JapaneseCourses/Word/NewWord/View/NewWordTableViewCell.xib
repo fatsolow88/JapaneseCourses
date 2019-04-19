@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romaji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyA-hu-kqM">
-                        <rect key="frame" x="20" y="19.5" width="51.5" height="21"/>
+                        <rect key="frame" x="20" y="12" width="51.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiragana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqM-DB-r1R">
-                        <rect key="frame" x="231" y="19.5" width="69" height="21"/>
+                        <rect key="frame" x="231" y="12" width="69" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,11 +40,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="oEX-7p-rMR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="09N-mL-4n0"/>
-                    <constraint firstItem="QyA-hu-kqM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DWd-aK-22U"/>
+                    <constraint firstItem="QyA-hu-kqM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="JNI-gc-ZP8"/>
+                    <constraint firstAttribute="bottom" secondItem="oEX-7p-rMR" secondAttribute="bottom" constant="5" id="Lny-Ct-3Tl"/>
                     <constraint firstItem="QyA-hu-kqM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Pla-XC-Bts"/>
                     <constraint firstAttribute="trailing" secondItem="qqM-DB-r1R" secondAttribute="trailing" constant="20" id="cyk-ti-unh"/>
-                    <constraint firstAttribute="bottom" secondItem="oEX-7p-rMR" secondAttribute="bottom" constant="5" id="ms2-1Z-4MJ"/>
-                    <constraint firstItem="qqM-DB-r1R" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yAw-kT-gyA"/>
+                    <constraint firstItem="qqM-DB-r1R" firstAttribute="centerY" secondItem="QyA-hu-kqM" secondAttribute="centerY" id="hqz-pX-wGl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

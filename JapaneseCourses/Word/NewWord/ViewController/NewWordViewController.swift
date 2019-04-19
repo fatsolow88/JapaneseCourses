@@ -13,6 +13,7 @@ import PKHUD
 
 protocol NewWordViewControllerDelegate: class {
     func newWordViewControllerDidSelectWord(selectedWord: NewWordCellViewModel)
+    func newWordViewControllerAddNewWord(newID: String)
 }
 
 class NewWordViewController: UIViewController, UITableViewDelegate, Storyboarded {
@@ -26,7 +27,7 @@ class NewWordViewController: UIViewController, UITableViewDelegate, Storyboarded
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.delegate = self
         tableView.register(UINib(nibName: "NewWordTableViewCell", bundle: nil), forCellReuseIdentifier:  NewWordTableViewCell.Identifier)
         
@@ -34,7 +35,14 @@ class NewWordViewController: UIViewController, UITableViewDelegate, Storyboarded
         setupCellTapHandling()
         
         viewModel.getWords()
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func addNewWord(_ sender: UIButton) {
+        self.delegate?.newWordViewControllerAddNewWord(newID: "\(viewModel.wordModels.count + 1)")
+    }
+    
+    func updateNewWord(newWordModel: NewWordModel){
+        viewModel.updateNewWord(newWordModel: newWordModel)
     }
     
     func bindViewModel() {
@@ -90,9 +98,13 @@ class NewWordViewController: UIViewController, UITableViewDelegate, Storyboarded
         visible ? PKHUD.sharedHUD.show(onView: view) : PKHUD.sharedHUD.hide()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60.0
+    }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return CGFloat.leastNormalMagnitude
     }
+    
     
     /*
     // MARK: - Navigation

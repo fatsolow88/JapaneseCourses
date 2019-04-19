@@ -80,16 +80,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cob-Ec-kCs">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mng-Vp-RI6">
+                                <rect key="frame" x="0.0" y="620" width="375" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="WCS-vz-5XE"/>
+                                </constraints>
+                                <state key="normal" title="Create New Word"/>
+                                <connections>
+                                    <action selector="addNewWord:" destination="MP9-ht-ffH" eventType="touchUpInside" id="c4c-fB-iis"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Cob-Ec-kCs" firstAttribute="trailing" secondItem="0oQ-88-FgG" secondAttribute="trailing" id="Ib2-Yo-V8h"/>
-                            <constraint firstItem="Cob-Ec-kCs" firstAttribute="leading" secondItem="0oQ-88-FgG" secondAttribute="leading" id="k9i-TG-mU5"/>
-                            <constraint firstItem="Cob-Ec-kCs" firstAttribute="top" secondItem="0oQ-88-FgG" secondAttribute="top" id="l8e-iZ-WnT"/>
-                            <constraint firstItem="Cob-Ec-kCs" firstAttribute="bottom" secondItem="0oQ-88-FgG" secondAttribute="bottom" id="q09-mo-dKk"/>
+                            <constraint firstItem="Cob-Ec-kCs" firstAttribute="leading" secondItem="0oQ-88-FgG" secondAttribute="leading" id="8zr-uL-X8j"/>
+                            <constraint firstItem="Cob-Ec-kCs" firstAttribute="top" secondItem="0oQ-88-FgG" secondAttribute="top" id="Duy-cy-LXv"/>
+                            <constraint firstItem="Cob-Ec-kCs" firstAttribute="trailing" secondItem="0oQ-88-FgG" secondAttribute="trailing" id="Ef4-g5-KeH"/>
+                            <constraint firstItem="Mng-Vp-RI6" firstAttribute="top" secondItem="Cob-Ec-kCs" secondAttribute="bottom" id="Fft-Tt-0oh"/>
+                            <constraint firstItem="Mng-Vp-RI6" firstAttribute="bottom" secondItem="0oQ-88-FgG" secondAttribute="bottom" id="OqS-wf-edc"/>
+                            <constraint firstItem="Mng-Vp-RI6" firstAttribute="leading" secondItem="0oQ-88-FgG" secondAttribute="leading" id="WpO-rl-NSc"/>
+                            <constraint firstItem="Mng-Vp-RI6" firstAttribute="trailing" secondItem="0oQ-88-FgG" secondAttribute="trailing" id="XPD-dv-Gyl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0oQ-88-FgG"/>
                     </view>
@@ -100,6 +113,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRd-M1-HX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1599" y="1418"/>
+        </scene>
+        <!--Add New Word View Controller-->
+        <scene sceneID="nRd-Us-0ra">
+            <objects>
+                <viewController storyboardIdentifier="AddNewWordViewController" id="x9d-om-pbS" customClass="AddNewWordViewController" customModule="JapaneseCourses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zet-bF-31A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vhH-zq-Vgs">
+                                <rect key="frame" x="20" y="20" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiragana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcE-wP-X6i" userLabel="HiraganaLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hiragana" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2U-vD-y8W">
+                                        <rect key="frame" x="137" y="0.0" width="198" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="yLF-4Z-uGa">
+                                <rect key="frame" x="20" y="50" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Romaji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRQ-Mb-3Bm" userLabel="RomajiLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Katakana" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ne4-ja-0oB" userLabel="Katakana">
+                                        <rect key="frame" x="112" y="0.0" width="223" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1C-iq-6Ay">
+                                <rect key="frame" x="147.5" y="88" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="W9Y-j7-3k4"/>
+                                    <constraint firstAttribute="height" constant="30" id="fhh-SX-Nmd"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z1C-iq-6Ay" firstAttribute="top" secondItem="yLF-4Z-uGa" secondAttribute="bottom" constant="8" id="F2o-9Z-kOg"/>
+                            <constraint firstItem="vhH-zq-Vgs" firstAttribute="top" secondItem="Be2-Ln-orz" secondAttribute="top" id="GVs-f6-Mo4"/>
+                            <constraint firstItem="yLF-4Z-uGa" firstAttribute="leading" secondItem="Be2-Ln-orz" secondAttribute="leading" constant="20" id="RUb-NQ-T12"/>
+                            <constraint firstItem="yLF-4Z-uGa" firstAttribute="top" secondItem="vhH-zq-Vgs" secondAttribute="bottom" id="Tkf-IX-WuV"/>
+                            <constraint firstItem="Z1C-iq-6Ay" firstAttribute="centerX" secondItem="Be2-Ln-orz" secondAttribute="centerX" id="Txv-my-pCu"/>
+                            <constraint firstItem="vhH-zq-Vgs" firstAttribute="leading" secondItem="Be2-Ln-orz" secondAttribute="leading" constant="20" id="Yjg-3s-dfW"/>
+                            <constraint firstItem="Be2-Ln-orz" firstAttribute="trailing" secondItem="yLF-4Z-uGa" secondAttribute="trailing" constant="20" id="rtq-7U-Xtx"/>
+                            <constraint firstItem="vhH-zq-Vgs" firstAttribute="trailing" secondItem="Be2-Ln-orz" secondAttribute="trailing" constant="-20" id="sTq-is-fQv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Be2-Ln-orz"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonSubmit" destination="Z1C-iq-6Ay" id="UVT-GI-pxv"/>
+                        <outlet property="textFieldHiragana" destination="o2U-vD-y8W" id="NLF-fG-SRt"/>
+                        <outlet property="textFieldRomaji" destination="ne4-ja-0oB" id="SRW-84-QwJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONV-9I-fhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2405.5999999999999" y="1418.1409295352325"/>
         </scene>
         <!--Vocab Category View Controller-->
         <scene sceneID="NIL-dP-DFr">

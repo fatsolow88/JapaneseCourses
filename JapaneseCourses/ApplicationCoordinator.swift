@@ -45,7 +45,7 @@ class ApplicationCoordinator: Coordinator {
         controllers.append(vocabCategoryCoordinator.rootViewController)
         controllers.append(newWordCoordinator.rootViewController)
         
-        tabController.viewControllers = controllers
+        tabController.viewControllers = controllers        
     }
 
     func start() {  // 6

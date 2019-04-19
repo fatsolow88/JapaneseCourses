@@ -11,9 +11,11 @@ import RxSwift
 import RxCocoa
 
 protocol NewWordViewModel {
+    
     var title: BehaviorRelay<String> { get }
     var romaji: BehaviorRelay<String> { get }
     var hiragana: BehaviorRelay<String> { get }
+    var newID: String {set get}
     
     var onShowLoadingHud: Observable<Bool> { get }
     
@@ -21,7 +23,7 @@ protocol NewWordViewModel {
     var submitButtonTapped: PublishSubject<Void> { get }
     var onNavigateBack: PublishSubject<Void>  { get }
     
-    //    var onShowError: PublishSubject<SingleButtonAlert>  { get }
+//    var onShowError: PublishSubject<SingleButtonAlert>  { get }
 }
 
 final class AddNewWordViewControllerViewModel: NewWordViewModel {
@@ -30,6 +32,8 @@ final class AddNewWordViewControllerViewModel: NewWordViewModel {
     var romaji = BehaviorRelay<String>(value: "")
     var hiragana = BehaviorRelay<String>(value: "")
     
+    var newID = ""
+
     var onShowLoadingHud: Observable<Bool> {
         return loadInProgress
             .asObservable()
@@ -39,10 +43,11 @@ final class AddNewWordViewControllerViewModel: NewWordViewModel {
     var submitButtonEnabled: Observable<Bool> {
         return Observable.combineLatest(romajiValid, hiraganaValid) { $0 && $1}
     }
-    let submitButtonTapped = PublishSubject<Void>()
-    let onNavigateBack = PublishSubject<Void>()
     
-    //    let onShowError = PublishSubject<SingleButtonAlert>()
+    let submitButtonTapped = PublishSubject<Void>()
+    
+    let onNavigateBack = PublishSubject<Void>()
+//    let onShowError = PublishSubject<SingleButtonAlert>()
     
     private let loadInProgress = BehaviorRelay<Bool>(value: false)
     private let disposeBag = DisposeBag()
@@ -66,8 +71,13 @@ final class AddNewWordViewControllerViewModel: NewWordViewModel {
     }
     
     private func postWord() {
+        
         loadInProgress.accept(true)
-        //        appServerClient.postFriend(
+        
+        loadInProgress.accept(false)
+        self.onNavigateBack.onNext(())
+
+                //        appServerClient.postFriend(
         //            firstname: firstname.value,
         //            lastname: lastname.value,
         //            phonenumber: phonenumber.value)
