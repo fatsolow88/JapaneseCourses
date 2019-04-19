@@ -30,22 +30,23 @@ class ApplicationCoordinator: Coordinator {
         
         courseListCoordinator = CourseListCoordinator(presenter: rootViewController)
         courseListCoordinator.start()
-        courseListCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        courseListCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Basic", image: UIImage(named: "icons8-alphabet-50"), selectedImage: UIImage(named: "icons8-alphabet-50"))
         
         vocabCategoryCoordinator = VocabCategoryCoordinator(presenter: rootViewController)
         vocabCategoryCoordinator.start()
-        vocabCategoryCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        vocabCategoryCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Category", image: UIImage(named: "icons8-type-50"), selectedImage: UIImage(named: "icons8-type-50"))
         
         newWordCoordinator = NewWordCoordinator(presenter: rootViewController)
         newWordCoordinator.start()
-        newWordCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 2)
+        newWordCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "New Word", image: UIImage(named: "icons8-add-new-50"), selectedImage: UIImage(named: "icons8-add-new-50"))
         
         var controllers: [UIViewController] = []
         controllers.append(courseListCoordinator.rootViewController)
         controllers.append(vocabCategoryCoordinator.rootViewController)
         controllers.append(newWordCoordinator.rootViewController)
         
-        tabController.viewControllers = controllers        
+        tabController.viewControllers = controllers
+        
     }
 
     func start() {  // 6

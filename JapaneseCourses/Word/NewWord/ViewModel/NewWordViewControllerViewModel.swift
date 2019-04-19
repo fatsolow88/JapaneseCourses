@@ -34,12 +34,6 @@ class NewWordViewControllerViewModel {
     var wordModels  = [NewWordModel]()
     
     init() {
-        wordModels.append(NewWordModel(word_id: "1", word_romaji: "a", word_hiragana: "あ"))
-        wordModels.append(NewWordModel(word_id: "2", word_romaji: "a", word_hiragana: "あ"))
-        wordModels.append(NewWordModel(word_id: "3", word_romaji: "a", word_hiragana: "あ"))
-        wordModels.append(NewWordModel(word_id: "4", word_romaji: "a", word_hiragana: "あ"))
-        wordModels.append(NewWordModel(word_id: "5", word_romaji: "a", word_hiragana: "あ"))
-        wordModels.append(NewWordModel(word_id: "6", word_romaji: "a", word_hiragana: "あ"))
     }
     
     func updateNewWord(newWordModel: NewWordModel){
@@ -57,15 +51,23 @@ class NewWordViewControllerViewModel {
             wordModels.append(newWordModel)
         }
         
-        cells.accept(wordModels.compactMap{NewWordTableViewCellType.normal(cellViewModel: NewWordCellViewModel(newWordModel: $0))})
-
+        updateCells()
     }
-    
+
     func getWords() {
         loadInProgress.accept(true)
         
-        cells.accept(wordModels.compactMap{NewWordTableViewCellType.normal(cellViewModel: NewWordCellViewModel(newWordModel: $0))})
+        updateCells()
         
         loadInProgress.accept(false)
+    }
+    
+    func updateCells(){
+        
+        if(wordModels.count>0){
+            cells.accept(wordModels.compactMap{NewWordTableViewCellType.normal(cellViewModel: NewWordCellViewModel(newWordModel: $0))})
+        }else{
+            cells.accept([NewWordTableViewCellType.empty])
+        }
     }
 }

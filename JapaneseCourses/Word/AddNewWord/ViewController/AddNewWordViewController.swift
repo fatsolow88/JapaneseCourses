@@ -68,12 +68,6 @@ class AddNewWordViewController: UIViewController, Storyboarded {
                     let _ = self?.navigationController?.popViewController(animated: true)
                 }
             ).disposed(by: disposeBag)
-        
-//        viewModel
-//            .onShowError
-//            .map { [weak self] in self?.presentSingleButtonDialog(alert: $0)}
-//            .subscribe()
-//            .disposed(by: disposeBag)
     }
     
     private func bind(textField: UITextField, to behaviorRelay: BehaviorRelay<String>) {

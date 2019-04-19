@@ -74,34 +74,11 @@ final class AddNewWordViewControllerViewModel: NewWordViewModel {
         
         loadInProgress.accept(true)
         
+        //SERVER CODE AFTER THIS
+        
         loadInProgress.accept(false)
+        
         self.onNavigateBack.onNext(())
 
-                //        appServerClient.postFriend(
-        //            firstname: firstname.value,
-        //            lastname: lastname.value,
-        //            phonenumber: phonenumber.value)
-        //            .subscribe(
-        //                onNext: { [weak self] _ in
-        //                    self?.loadInProgress.accept(false)
-        //                    self?.onNavigateBack.onNext(())
-        //                },
-        //                onError: { [weak self] error in
-        //                    guard let `self` = self else {
-        //                        return
-        //                    }
-        //
-        //                    self.loadInProgress.accept(false)
-        //
-        //                    let okAlert = SingleButtonAlert(
-        //                        title: (error as? AppServerClient.PostFriendFailureReason)?.getErrorMessage() ?? "Could not connect to server. Check your network and try again later.",
-        //                        message: "Could not add \(self.firstname.value) \(self.lastname.value).",
-        //                        action: AlertAction(buttonTitle: "OK", handler: { print("Ok pressed!") })
-        //                    )
-        //
-        //                    self.onShowError.onNext(okAlert)
-        //                }
-        //            )
-        //            .disposed(by: disposeBag)
     }
 }

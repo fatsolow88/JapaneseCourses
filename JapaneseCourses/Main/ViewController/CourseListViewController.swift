@@ -34,6 +34,8 @@ class CourseListViewController: UIViewController, UITableViewDelegate, Storyboar
         
         viewModel.getCourses()
         
+        self.title = "Basic"
+        
     }
     
     func bindViewModel() {

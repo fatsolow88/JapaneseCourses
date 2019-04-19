@@ -15,7 +15,7 @@ struct NewWordCellViewModel {
     let word_hiragana   : String
     
     let created_date    : String
-    // Dependency Injection (DI)
+    
     init(newWordModel: NewWordModel) {
         
         self.word_id        = newWordModel.word_id
